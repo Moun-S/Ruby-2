@@ -1,9 +1,15 @@
+def welcome_instructions
+
 puts "Bienvenue dans la partie !, vous êtes en bas de l'escalier"
 puts ""
 puts "pour monter d'une marche appuyer sur 5 ou 6"
 puts ""
-
 puts "pour descendre d'une marche appuyer sur 1"
+
+end
+
+
+def instructions
 
 marche = 1
 
@@ -31,6 +37,18 @@ end #IF
 
 end #WHILE
 
-puts "Bravo vous avez réussi !"
+    puts "Bravo vous avez réussi !"
+
+end
+
+
+def perform
+
+	welcome_instructions
+	instructions
+
+end
+
+perform
 
 
