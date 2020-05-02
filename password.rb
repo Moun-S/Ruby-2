@@ -1,4 +1,4 @@
-def created_password
+def signup
 
 puts "Merci de créer votre mot de passe:"
 
@@ -11,7 +11,7 @@ return create_password
 end
 
 
-def input_password
+def login
 
 puts "Merci de saisir votre mot de passe"
 
@@ -22,11 +22,20 @@ password = gets.chomp
 end
 
 
-def result
+def welcome_screen
 
-create_password = created_password
+	puts "Bienvenue ! voici les informations top sècretes:"
+	puts "fdgdgdshfhfdhfhfdhfdhfdhfhfjfdjjjj"
+	puts "fqsdgdsgsdfhfdsjgjdgfjgfjgkjgfkgkg"
+	puts "gdsgdsgsfdhfdshsfdhfdshfhfhfhfhsfh"
+end
 
-password = input_password
+
+def perform
+
+create_password = signup
+
+password = login
 
 until password == create_password
 
@@ -38,9 +47,10 @@ password = gets.chomp
 
 end
 
-puts "Bravo,correcte password"
+welcome_screen
+
 end
 
-result
+perform
 
 
