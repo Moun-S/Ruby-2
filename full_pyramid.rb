@@ -14,6 +14,3 @@ end
 end
 
 full_pyramid
-
-
-	
