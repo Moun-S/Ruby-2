@@ -19,6 +19,8 @@ print ">"
 
 password = gets.chomp
 
+return password
+
 end
 
 

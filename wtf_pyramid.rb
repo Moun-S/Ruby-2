@@ -1,21 +1,29 @@
-puts "Bienvenue à ma pyramide, combien d'étage veux-tu ?"
-puts ">"
+def ask_floor
+	puts "Combien d'étage veux-tu dans la pyramide ?"
+	print ">"
+	total_floors = gets.chomp.to_i
+	return total_floors
+end
 
-nbr = gets.chomp.to_i
+def build_floor(total_floors)
+	total_floors.times do |current_floor|
+	print " " * (total_floors - current_floor)
+	puts  "#" * (2 * current_floor + 1)
+    end
+end
 
-nbr.times do |n|
-
-print " " * (nbr-n)
-puts "#" * (2*n+1)
+def buil_inverted_floors(total_floors)
+	total_floors.times do |current_floor2|
+	print " " *(current_floor2+1)
+	puts "#" * (total_floors-current_floor2-1) + "#" * (total_floors-current_floor2)
+	end
 
 end
 
-nbr.times do |x|
-
-	print " " *(x+1)
-	puts "#" * (nbr-x-1) + "#" * (nbr-x)
-
+def perform
+	total_floors = ask_floor
+	build_floor(total_floors)
+	buil_inverted_floors(total_floors)
+	puts "voilà ta pyramide :) :)"
 end
-
-
-puts "Bravo pyramide construite !"
+perform
